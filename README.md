@@ -1,104 +1,131 @@
 # COMPILER-DESIGN
-# RoutePay - Toll Management System 🚗
+
+# COMPILER DESIGN SIMULATOR
 
 ## Overview
 
-RoutePay is a web-based Toll Management System designed to simplify toll collection and payment processing. The system enables users to manage toll transactions, make payments using QR codes, generate reports, and monitor toll revenue efficiently.
+Compiler Design Simulator is a mini-project that demonstrates the basic phases of a compiler, including Lexical Analysis and Syntax Analysis. The application allows users to enter source code, perform tokenization using a lexer, and validate program structure using a parser.
 
 ## Features
 
-* User Registration and Login
-* Secure Authentication
-* Toll Transaction Management
-* QR Code Based Payment System
-* Dashboard with Revenue Statistics
-* Vehicle Type Management
-* Dynamic Report Generation
-* PDF Report Download
-* Email Notifications using PHPMailer
-* Responsive User Interface
+* Lexical Analysis (Lexer)
+* Syntax Analysis (Parser)
+* Symbol Table Generation
+* Keyword Identification
+* Operator Detection
+* Identifier Recognition
+* Program Validation
+* User-Friendly Web Interface
+* Output Export as PDF
 
 ## Technologies Used
 
-### Frontend
-
-* HTML5
-* CSS3
+* HTML
+* CSS
 * JavaScript
+* C Programming
+* Lexical Analysis Concepts
+* Parsing Techniques
 
-### Backend
+## Project Structure
 
-* PHP
+COMPILER-DESIGN-SIMULATOR/
 
-### Database
+├── index.html
 
-* MySQL
+├── style.css
 
-### Libraries & Tools
+├── script.js
 
-* PHPMailer
-* XAMPP
-* Git & GitHub
+├── input.txt
 
-## Project Modules
+├── lexer.c
 
-### Authentication Module
+├── parser.c
 
-* User Signup
-* User Login
-* Password Verification
+└── README.md
 
-### Dashboard Module
+## Modules
 
-* Total Transactions
-* Revenue Summary
-* Recent Transactions
+### Lexical Analyzer
 
-### Payment Module
+The lexical analyzer scans the input program and identifies:
 
-* QR Code Based Payment
-* Payment Confirmation
+* Keywords
+* Identifiers
+* Operators
+* Numbers
 
-### Reports Module
+It also generates a Symbol Table containing unique identifiers.
 
-* Vehicle-wise Reports
-* Revenue Reports
-* PDF Generation
+### Parser
 
-## Installation
+The parser validates the program structure based on predefined grammar rules:
 
-1. Clone the repository:
+* Presence of `int main()`
+* Presence of `begin` and `end`
+* Presence of `while` loop
+* Presence of `return` statement
 
-```bash
-git clone https://github.com/your-username/RoutePay.git
-```
+If all rules are satisfied, the program is considered valid.
 
-2. Move the project to XAMPP htdocs folder.
-
-3. Start Apache and MySQL using XAMPP.
-
-4. Import the database into MySQL.
-
-5. Open your browser and run:
+## Sample Input
 
 ```text
-http://localhost/RoutePay
+int main()
+begin
+ int count=1;
+ while(n>1)
+ count=count+1;
+ n=n/2;
+ end while
+return count
+end
 ```
+
+## How to Run
+
+### Compile Lexer
+
+```bash
+gcc lexer.c -o lexer
+lexer
+```
+
+### Compile Parser
+
+```bash
+gcc parser.c -o parser
+parser
+```
+
+### Run Web Interface
+
+Open `index.html` in any web browser.
+
+## Applications
+
+* Compiler Design Laboratory
+* Educational Demonstrations
+* Token Analysis
+* Syntax Checking
+* Academic Projects
 
 ## Future Enhancements
 
-* Online Payment Gateway Integration
-* SMS Notifications
-* Admin Analytics Dashboard
-* Mobile Application Support
+* Semantic Analysis
+* Intermediate Code Generation
+* Code Optimization
+* Parse Tree Visualization
+* Error Recovery Mechanism
+* Support for Additional Language Constructs
 
 ## Author
 
 Samarth Patil
 
-Computer Science Student
+## License
 
-Open to Internship & Placement Opportunities
+This project is intended for educational and learning purposes.
 
-Email: [samarthpatil8147@gmail.com](mailto:samarthpatil8147@gmail.com)
 
